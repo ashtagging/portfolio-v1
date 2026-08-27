@@ -1,0 +1,32 @@
+@import "../../global.scss";
+
+.portfolio-tab {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: rgba(92, 101, 100, 0.08);
+    color: $greyColor;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    @include mobile {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+    &:hover {
+        background: rgba(92, 101, 100, 0.18);
+    }
+    &:active {
+        transform: scale(0.97);
+    }
+    &.active {
+        background: $mainColor;
+        color: white;
+        &:hover {
+            background: $mainColor;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.rating-page {
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
+    font-family: "Overpass";
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.submit-container {
+    background-color: hsl(213, 19%, 18%);
+    width: 320px;
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.rating-background {
+    color: hsla(25, 97%, 53%, 0.8);
+    background-color: hsla(216, 12%, 54%, 0.1);
+    border-radius: 30px;
+    margin-top: 20px;
+    width: 225px;
+    font-size: 15px;
+}
+
+.rating-text {
+    margin: 8px;
+}
+
+.rating-margin{
+    margin: 16px 0px 16px 0px;
+}
+
+
+.title-ty {
+    margin-bottom: 0px;
+    margin-top: 25px;
+}

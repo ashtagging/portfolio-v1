@@ -1,0 +1,13 @@
+$mainColor: rgb(239, 91, 78);
+$secondaryColor: #80BDFA;
+$greyColor: rgb(92, 101, 100);
+$backgroundColor:#d3d3fe;
+$width: 768px;
+i{
+    overflow: hidden;
+}
+@mixin mobile {
+    @media(max-width: #{$width}) {
+        @content
+    }
+}

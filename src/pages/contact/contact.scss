@@ -1,0 +1,70 @@
+@import "../../global.scss";
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon-list {
+        width: 100%;
+        max-width: 60rem;
+        padding: 0 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-item {
+            list-style: none;
+            .icon-link {
+                display: inline-flex;
+                font-size: 4rem;
+                text-decoration: none;
+                color: $greyColor;
+                width: 8rem;
+                height: 8rem;
+                transition: .5s linear;
+                position: relative;
+                z-index: 1;
+                margin: auto;
+                overflow: hidden;
+            }
+            .icon-link:hover {
+                color: #fff;
+            }
+            .icon-link i {
+                margin: auto;
+                overflow: hidden;
+            }
+            .icon-link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 8rem;
+                height: 8rem;
+                background: #000;
+                border-radius: 50%;
+                z-index: -1;
+                transform: scale(0);
+                transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+            }
+            .icon-link:hover::before {
+                transform: scale(1);
+            }
+        }
+        .icon-item:nth-child(1) a:hover:before {
+            background-color: #0077B5;
+        }
+        .icon-item:nth-child(2) a:hover:before {
+            background-color: #24292f;
+        }
+        .icon-item:nth-child(3) a:hover:before {
+            background-color: #cd201f;
+        }
+        .icon-item:nth-child(4) a:hover:before {
+            background-color: #e4405f;
+        }
+    }
+}

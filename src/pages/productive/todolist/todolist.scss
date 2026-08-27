@@ -1,0 +1,189 @@
+@import "../../../global.scss";
+
+.todo-wrapper {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    padding: 24px 16px;
+    box-sizing: border-box;
+
+    .todo-container {
+        text-align: center;
+        background: $greyColor;
+        width: 100%;
+        max-width: 460px;
+        box-sizing: border-box;
+        margin: 24px auto;
+        padding: 32px 28px;
+        border-radius: 16px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+
+        ul {
+            justify-content: center;
+            align-items: stretch;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+            font-size: 1.6rem;
+        }
+
+        @include mobile {
+            max-width: 100%;
+            padding: 24px 16px;
+        }
+    }
+}
+
+.list-item {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .todo-input {
+        padding: 14px 16px;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        outline: none;
+        flex: 1;
+        min-width: 0;
+        background-color: rgba(255, 255, 255, 0.92);
+        color: $greyColor;
+        font-weight: 600;
+        font-size: 0.9rem;
+        font-family: "comfortaa";
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+        &:focus {
+            border-color: $secondaryColor;
+            box-shadow: 0 0 0 3px rgba(128, 189, 250, 0.35);
+        }
+
+        &::placeholder {
+            color: rgba(92, 101, 100, 0.6);
+        }
+    }
+
+    .todo-add {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        outline: none;
+        background: $mainColor;
+        color: #fff;
+        font-size: 1rem;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+
+        &:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(244, 62, 46, 0.4);
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+
+    button {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: rgba(255, 255, 255, 0.75);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-family: "comfortaa";
+        font-weight: 600;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+        }
+
+        &.active {
+            background: $mainColor;
+            border-color: $mainColor;
+            color: #fff;
+        }
+    }
+}
+
+.list-container {
+    margin-top: 18px;
+}
+
+.empty-state {
+    padding: 30px 10px 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+
+    i {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        display: block;
+        opacity: 0.5;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.todo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+
+    .clear-completed {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.75);
+        font-family: "comfortaa";
+        font-weight: 600;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: color 0.15s ease;
+
+        &:hover:not(:disabled) {
+            color: $mainColor;
+            text-decoration: underline;
+        }
+
+        &:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+    }
+}

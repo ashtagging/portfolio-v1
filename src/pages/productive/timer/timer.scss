@@ -1,0 +1,167 @@
+@import "../../../global.scss";
+
+.timer-wrapper {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 24px 16px;
+    box-sizing: border-box;
+
+    .timer-container {
+        background-color: $greyColor;
+        width: 100%;
+        max-width: 420px;
+        box-sizing: border-box;
+        padding: 32px 28px;
+        border-radius: 16px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+
+        @include mobile {
+            max-width: 100%;
+            padding: 24px 16px;
+        }
+    }
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: rgba(244, 62, 46, 0.18);
+    color: $mainColor;
+    transition: all 0.2s ease;
+
+    &.break {
+        background: rgba(128, 189, 250, 0.18);
+        color: $secondaryColor;
+    }
+}
+
+.ring-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.progress-bar {
+    width: 220px;
+    height: 220px;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+}
+
+.console {
+    padding: 0;
+}
+
+.session-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    @include mobile {
+        gap: 8px;
+    }
+}
+
+.stepper {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 14px 10px;
+
+    .stepper-label {
+        margin: 0 0 10px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    .stepper-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .stepper-value {
+        margin: 0;
+        min-width: 64px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+.time-change-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.15s ease;
+
+    i {
+        font-size: 0.8rem;
+        color: #fff;
+    }
+
+    &:hover {
+        background: $mainColor;
+        transform: translateY(-1px);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.timer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateY(-2px);
+    }
+
+    &.primary {
+        width: 64px;
+        height: 64px;
+        font-size: 1.4rem;
+        background: $mainColor;
+
+        &:hover {
+            box-shadow: 0 6px 16px rgba(244, 62, 46, 0.4);
+        }
+    }
+}
