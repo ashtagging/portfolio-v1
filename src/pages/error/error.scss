@@ -1,0 +1,64 @@
+@import "../../global.scss";
+
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: white;
+    color: $greyColor;
+    text-align: center;
+
+    .error-content {
+        max-width: 420px;
+    }
+
+    .error-code {
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 1;
+        color: $mainColor;
+        margin-bottom: 8px;
+
+        @include mobile {
+            font-size: 64px;
+        }
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+        color: #222;
+
+        @include mobile {
+            font-size: 22px;
+        }
+    }
+
+    .error-message {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 28px;
+    }
+
+    .error-home-link {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 999px;
+        background-color: $mainColor;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        &:focus-visible {
+            outline: 3px solid $secondaryColor;
+            outline-offset: 2px;
+        }
+    }
+}

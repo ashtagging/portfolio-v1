@@ -34,15 +34,12 @@
             overflow: hidden;
             padding: 25px;
             justify-content: space-between;
-            h1 {
+            h3 {
                 color: white;
                 font-size: 1.75em;
                 @include mobile {
                     font-size: 18px;
                 }
-            }
-            h2 {
-                color: white;
             }
             .card-buttons {
                 align-items: center;
@@ -151,7 +148,8 @@
                     padding-bottom: 8px;
                 }
             }
-            h3 {
+            h4 {
+                font-size: 1.1em;
                 padding: 8px 0px 8px 0px;
                 @include mobile {
                     font-size: 14px;

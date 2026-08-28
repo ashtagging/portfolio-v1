@@ -10,7 +10,11 @@ function Menu({ menuOpen, setMenuOpen }) {
   };
 
   return (
-    <div className={"menu "+(menuOpen && "active")}>
+    <nav
+      id="main-menu"
+      className={`menu ${menuOpen ? "active" : ""}`}
+      aria-label="Sections"
+    >
       <ul>
         <li>
           <a href="#introduction" onClick={go("introduction")}>Home</a>
@@ -28,7 +32,7 @@ function Menu({ menuOpen, setMenuOpen }) {
           <a href="#contact" onClick={go("contact")}>Contact</a>
         </li>
       </ul>
-    </div>
+    </nav>
   )
 }
 

@@ -1,12 +1,11 @@
 import React from "react";
 import scrollToSection from "../../utils/scrollToSection";
 import "./navbar.scss";
-// import {Person, Mail} from '@mui/icons-material';
 
 function Navbar({ menuOpen, setMenuOpen }) {
   return (
-    <div className={"topbar " + (menuOpen && "active")}>
-      <div className="navbar">
+    <div className={`topbar ${menuOpen ? "active" : ""}`}>
+      <nav className="navbar" aria-label="Primary">
         <div className="left">
           <a
             href="#introduction"
@@ -21,13 +20,20 @@ function Navbar({ menuOpen, setMenuOpen }) {
           </a>
         </div>
         <div className="right">
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <button
+            type="button"
+            className="hamburger"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="main-menu"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>
-          </div>
+          </button>
         </div>
-      </div>
+      </nav>
     </div>
   );
 }

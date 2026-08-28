@@ -69,7 +69,8 @@ export default function Portfolio() {
   }, [selected]);
 
   return (
-    <div className="portfolio" id="portfolio">
+    <section className="portfolio" id="portfolio" aria-label="Portfolio">
+      <h2 className="visually-hidden">Portfolio</h2>
       <ul role="tablist" aria-label="Select project">
         {list.map((item) => (
           <PortfolioList
@@ -103,6 +104,6 @@ export default function Portfolio() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

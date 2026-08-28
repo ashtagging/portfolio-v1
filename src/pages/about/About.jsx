@@ -9,13 +9,13 @@ function About() {
   };
 
   return (
-    <div className="about" id="about">
+    <section className="about" id="about" aria-label="About me">
         <div className="about-container">
           <div className="imgContainer">
-            <img src="assets/profile.png" alt="Ashley Littlewood" />
+            <img src="assets/profile.png" alt="Portrait of Ashley Littlewood" />
           </div>
           <div className="wrapper">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
             <p>
               Hi 🙋‍♂️, I'm Ashley — a Software Developer from the UK
               specialising in C#, .NET and React. I currently build
@@ -35,14 +35,14 @@ function About() {
                 <button onClick={viewCV} className="view-button cv-button">
                   View CV
                   <div className="icon">
-                    <i className="fa-solid fa-file-lines"></i>
+                    <i className="fa-solid fa-file-lines" aria-hidden="true"></i>
                   </div>
                 </button>
               </div>
             </div>
           </div>
         </div>
-    </div>
+    </section>
   );
 }
 

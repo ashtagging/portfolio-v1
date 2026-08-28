@@ -16,13 +16,13 @@ function Homepage() {
     <div className="homepage">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <div className="sections">
+      <main className="sections">
         <Introduction/>
         <About/>
         <Portfolio/>
         <Photos/>
         <Contact/>
-      </div>
+      </main>
     </div>
 
   );

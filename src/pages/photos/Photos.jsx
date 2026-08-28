@@ -97,16 +97,17 @@ function Photos() {
   }, []);
 
   return (
-    <div className="photos" id="photos">
+    <section className="photos" id="photos" aria-label="Photos">
+      <h2 className="visually-hidden">Photos</h2>
       <div className="carousel">
         <div className="track" ref={trackRef} onScroll={handleScroll}>
           {data.map((d) => (
             <div className="slide" key={d.id}>
-              <img src={d.img} alt={d.title} />
+              <img src={d.img} alt={`${d.title}, ${d.country}`} loading="lazy" />
               <div className="text-container">
-                <h2 className="photo-heading">{d.title}</h2>
+                <h3 className="photo-heading">{d.title}</h3>
                 <p className="photo-country">
-                  <i className="fa-solid fa-location-dot"></i>
+                  <i className="fa-solid fa-location-dot" aria-hidden="true"></i>
                   {d.country}
                 </p>
               </div>
@@ -119,14 +120,14 @@ function Photos() {
           aria-label="Previous photo"
           onClick={() => stepBy(-1)}
         >
-          <i className="fa-solid fa-chevron-left"></i>
+          <i className="fa-solid fa-chevron-left" aria-hidden="true"></i>
         </button>
         <button
           className="arrow-button right"
           aria-label="Next photo"
           onClick={() => stepBy(1)}
         >
-          <i className="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
         </button>
 
         <div className="dots" role="tablist" aria-label="Select photo">
@@ -142,7 +143,7 @@ function Photos() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

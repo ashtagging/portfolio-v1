@@ -18,37 +18,38 @@ function Introduction() {
   }, []);
 
   return (
-    <div className="introduction" id="introduction">
+    <section className="introduction" id="introduction" aria-label="Introduction">
       <div className="left">
         <div className="imgContainer animate__animated animate__fadeInLeft">
-          <img src="assets/hashtag-logo.png"  alt="logo" />
+          <img src="assets/hashtag-logo.png" alt="" />
         </div>
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2
-            className="animate__animated animate__fadeInUp"
+          <p
+            className="eyebrow animate__animated animate__fadeInUp"
             style={{ animationDelay: "0.1s" }}
           >
             Hi There, I'm
-          </h2>
+          </p>
           <h1
             className="animate__animated animate__fadeInUp"
             style={{ animationDelay: "0.3s" }}
           >
             Ashley Littlewood
           </h1>
-          <h3
-            className="animate__animated animate__fadeInUp"
+          <p
+            className="role animate__animated animate__fadeInUp"
             style={{ animationDelay: "0.5s" }}
           >
             <span ref={textRef}></span>
-          </h3>
+          </p>
         </div>
       </div>
       <a
         className="scroll-down"
         href="#about"
+        aria-label="Scroll to About section"
         onClick={(e) => {
           e.preventDefault();
           scrollToSection("about");
@@ -56,7 +57,7 @@ function Introduction() {
       >
         <img src="assets/down.png" alt="" />
       </a>
-    </div>
+    </section>
   );
 }
 

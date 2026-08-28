@@ -55,6 +55,13 @@
                 overflow-x: hidden;
                 overflow-y: hidden;
                 cursor: pointer;
+                padding: 0;
+                border: none;
+                background: none;
+                &:focus-visible {
+                    outline: 2px solid $mainColor;
+                    outline-offset: 4px;
+                }
                 span {
                     width: 100%;
                     height: 3px;
