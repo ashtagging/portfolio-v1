@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/portfolio-v1/static/css/main.6bac29e3.css",
+    "main.js": "/portfolio-v1/static/js/main.606c1307.js",
+    "static/media/alarm.mp3": "/portfolio-v1/static/media/alarm.a7e42daa23532466b3b7.mp3",
+    "index.html": "/portfolio-v1/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.6bac29e3.css",
+    "static/js/main.606c1307.js"
+  ]
+}
